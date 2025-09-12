@@ -1,0 +1,119 @@
+.range-picker-container {
+  max-width: 700px;
+  margin: 0 auto;
+  // padding: 0 16px;
+}
+
+.months-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.month-container {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .month-header-container {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+
+    .month-header {
+      flex: 1;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      line-height: 40px;
+      margin: 0;
+    }
+
+    .arrow-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+    .left-arrow {
+      left: 0;
+    }
+    .right-arrow {
+      right: 0;
+    }
+  }
+
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    margin-bottom: 18px;
+    width: 100%;
+    min-height: 300px;
+
+    .weekday-header {
+      font-weight: 600;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .blank {
+      visibility: hidden;
+    }
+
+    .date {
+      cursor: pointer;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      text-align: center;
+      transition: background-color 0.2s ease;
+      &:hover {
+        background: #c5d4f7;
+      }
+      &.start-date {
+        background-color: #4285f4;
+        color: white;
+        font-weight: 700;
+      }
+      &.end-date {
+        background-color: #f4511e;
+        color: white;
+        font-weight: 700;
+      }
+      &.in-range {
+        background-color: #a1c0fa;
+        color: white;
+      }
+    }
+  }
+
+  .month-time-selector {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    input {
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+  }
+}
