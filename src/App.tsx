@@ -1,9 +1,9 @@
-import Ex from "./components/Ex";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <>
-      <Ex />
+      <Home />
     </>
   );
 }
